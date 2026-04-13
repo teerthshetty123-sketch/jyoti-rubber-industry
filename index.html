@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Jyothi Rubber Industries - Manufacturer of Automotive Rubber Engine Mounting, Rubber Molded Hose, Metal Bonded Rubber Bush, Strut Kits and Steering Parts in Mumbai, Maharashtra">
+<title>Jyothi Rubber Industries | Rubber Parts Manufacturer | Mumbai</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #e2e8f0; background: #0f1117; line-height: 1.6; }
+
+  :root {
+    --bg-base:    #0f1117;
+    --bg-surface: #181c27;
+    --bg-card:    #1e2436;
+    --bg-hover:   #252d42;
+    --accent:     #e8a020;
+    --accent-lt:  #fbbf24;
+    --border:     #2a3045;
+    --border-lt:  #364060;
+    --text-1:     #f1f5f9;
+    --text-2:     #94a3b8;
+    --text-3:     #64748b;
+    --green:      #10b981;
+    --red:        #ef4444;
+  }
+
+  /* ── NAV ── */
+  .nav {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 0.9rem 2rem; background: #0c0f19;
+    border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100; flex-wrap: wrap; gap: 10px;
+  }
+  .nav-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .nav-logo img { width: 46px; height: 46px; border-radius: 8px; object-fit: contain; background: #fff; padding: 5px; border: 1px solid var(--border); }
+  .nav-brand { font-size: 15px; font-weight: 700; color: var(--text-1); line-height: 1.2; }
+  .nav-brand span { display: block; font-size: 11px; font-weight: 400; color: var(--text-3); }
+  .nav-links { display: flex; gap: 1.75rem; }
+  .nav-links a { font-size: 13px; color: var(--text-2); text-decoration: none; transition: color 0.15s; }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta { background: var(--accent); color: #0f1117; font-size: 13px; padding: 8px 18px; border-radius: 6px; border: none; cursor: pointer; text-decoration: none; font-weight: 700; transition: background 0.15s; }
+  .nav-cta:hover { background: var(--accent-lt); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 5rem 2rem 4rem;
+    background: linear-gradient(135deg, #0c0f19 0%, #131929 50%, #0f1117 100%);
+    display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;
+    border-bottom: 1px solid var(--border); position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; top: -80px; right: -80px;
+    width: 420px; height: 420px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(232,160,32,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-text { flex: 1; min-width: 280px; position: relative; z-index: 1; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(232,160,32,0.12); color: var(--accent);
+    border: 1px solid rgba(232,160,32,0.3);
+    font-size: 11px; font-weight: 700; padding: 5px 14px;
+    border-radius: 999px; margin-bottom: 1.5rem; letter-spacing: 0.07em; text-transform: uppercase;
+  }
+  .hero-badge span { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); display: inline-block; }
+  .hero h1 { font-size: 40px; font-weight: 800; line-height: 1.15; margin-bottom: 1rem; color: var(--text-1); }
+  .hero h1 em { color: var(--accent); font-style: normal; }
+  .hero-desc { font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 1.75rem; max-width: 480px; }
+  .hero-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 2rem; }
+  .meta-pill { display: flex; align-items: center; gap: 6px; font-size: 12px; background: var(--bg-card); border: 1px solid var(--border); padding: 6px 12px; border-radius: 999px; color: var(--text-2); }
+  .meta-pill svg { width: 13px; height: 13px; fill: var(--accent); flex-shrink: 0; }
+  .hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn-primary { background: var(--accent); color: #0f1117; padding: 12px 28px; border-radius: 6px; border: none; font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: none; transition: background 0.15s; display: inline-block; }
+  .btn-primary:hover { background: var(--accent-lt); }
+  .btn-outline { background: transparent; color: var(--text-1); padding: 12px 28px; border-radius: 6px; border: 1px solid var(--border-lt); font-size: 14px; font-weight: 600; cursor: pointer; text-decoration: none; transition: border-color 0.15s, color 0.15s; display: inline-block; }
+  .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+  .hero-logo { flex-shrink: 0; position: relative; z-index: 1; }
+  .hero-logo img { width: 160px; height: 160px; border-radius: 16px; border: 2px solid var(--border-lt); object-fit: contain; background: #fff; padding: 14px; box-shadow: 0 0 40px rgba(232,160,32,0.12); }
+
+  /* ── STATS ── */
+  .stats-bar { display: flex; justify-content: center; flex-wrap: wrap; background: var(--bg-surface); border-bottom: 1px solid var(--border); }
+  .stat-item { padding: 1.5rem 2.5rem; text-align: center; border-right: 1px solid var(--border); }
+  .stat-item:last-child { border-right: none; }
+  .stat-num { font-size: 24px; font-weight: 800; color: var(--accent); }
+  .stat-label { font-size: 11px; color: var(--text-3); margin-top: 3px; letter-spacing: 0.05em; text-transform: uppercase; }
+
+  /* ── SECTIONS ── */
+  .section { padding: 4rem 2rem; }
+  .section-alt { background: var(--bg-surface); }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .section-header { text-align: center; margin-bottom: 2.5rem; }
+  .section-header h2 { font-size: 28px; font-weight: 800; color: var(--text-1); }
+  .section-header p { font-size: 14px; color: var(--text-2); margin-top: 0.6rem; max-width: 540px; margin-left: auto; margin-right: auto; line-height: 1.75; }
+  .divider { width: 48px; height: 3px; background: var(--accent); border-radius: 2px; margin: 0.8rem auto 0; }
+
+  /* ── CATEGORY CARDS ── */
+  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 16px; }
+  .cat-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; display: block; transition: border-color 0.2s, transform 0.2s; }
+  .cat-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .cat-card img { width: 100%; height: 170px; object-fit: cover; display: block; }
+  .cat-card-body { padding: 14px; }
+  .cat-card h3 { font-size: 13px; font-weight: 700; color: var(--text-1); margin-bottom: 6px; line-height: 1.4; }
+  .cat-count { display: inline-block; background: rgba(232,160,32,0.12); color: var(--accent); border: 1px solid rgba(232,160,32,0.25); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+
+  /* ── PRODUCT CARDS WITH PRICE ── */
+  .prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
+  .prod-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s; }
+  .prod-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .prod-card-img { position: relative; }
+  .prod-card-img img { width: 100%; height: 180px; object-fit: cover; display: block; }
+  .prod-card-img .cat-tag { position: absolute; top: 8px; left: 8px; background: rgba(15,17,23,0.82); color: var(--text-2); font-size: 10px; font-weight: 600; padding: 3px 8px; border-radius: 4px; letter-spacing: 0.04em; text-transform: uppercase; }
+  .prod-card-body { padding: 14px; flex: 1; display: flex; flex-direction: column; }
+  .prod-card-body h3 { font-size: 13px; font-weight: 700; color: var(--text-1); line-height: 1.45; margin-bottom: 6px; }
+  .prod-card-body .spec { font-size: 11px; color: var(--text-3); margin-bottom: auto; padding-bottom: 12px; }
+  .prod-price-row { display: flex; align-items: center; justify-content: space-between; padding-top: 12px; border-top: 1px solid var(--border); margin-top: 4px; }
+  .prod-price { display: flex; align-items: baseline; gap: 3px; }
+  .prod-price .amt { font-size: 20px; font-weight: 800; color: var(--accent); }
+  .prod-price .unit { font-size: 11px; color: var(--text-3); }
+  .prod-price-note { font-size: 10px; color: var(--text-3); font-style: italic; }
+  .prod-enquire { display: block; text-align: center; margin-top: 10px; background: rgba(232,160,32,0.1); color: var(--accent); border: 1px solid rgba(232,160,32,0.3); font-size: 12px; font-weight: 700; padding: 8px 12px; border-radius: 7px; text-decoration: none; transition: background 0.15s, border-color 0.15s; letter-spacing: 0.02em; }
+  .prod-enquire:hover { background: rgba(232,160,32,0.22); border-color: var(--accent); }
+  .price-note-box { max-width: 1100px; margin: 1.5rem auto 0; background: rgba(232,160,32,0.07); border: 1px solid rgba(232,160,32,0.2); border-radius: 8px; padding: 10px 16px; font-size: 12px; color: var(--text-3); text-align: center; }
+  .price-note-box strong { color: var(--accent); }
+
+  /* ── WHY US ── */
+  .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+  .why-card { background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 12px; padding: 1.75rem; }
+  .why-num { font-size: 11px; font-weight: 800; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 8px; }
+  .why-card h3 { font-size: 14px; font-weight: 700; color: var(--text-1); margin-bottom: 8px; }
+  .why-card p { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+
+  /* ── ABOUT / PROFILE ── */
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start; }
+  @media (max-width: 680px) { .about-grid { grid-template-columns: 1fr; } }
+  .info-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 1.75rem; }
+  .card-title { font-size: 11px; font-weight: 800; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
+  .info-row { display: flex; align-items: flex-start; gap: 12px; padding: 9px 0; border-bottom: 1px solid var(--border); }
+  .info-row:last-child { border-bottom: none; }
+  .info-label { font-size: 10px; color: var(--text-3); min-width: 95px; margin-top: 2px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; }
+  .info-val { font-size: 13px; font-weight: 600; color: var(--text-1); }
+  .gst-badge { display: inline-flex; align-items: center; gap: 4px; background: rgba(16,185,129,0.12); color: var(--green); border: 1px solid rgba(16,185,129,0.25); font-size: 11px; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+  .stars { color: var(--accent); }
+  .team-desc { font-size: 13px; color: var(--text-2); line-height: 1.8; margin-bottom: 1.5rem; }
+  .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+  .team-pill { background: var(--bg-hover); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 0.75rem; text-align: center; transition: border-color 0.15s; }
+  .team-pill:hover { border-color: var(--accent); }
+  .team-icon { font-size: 22px; margin-bottom: 6px; }
+  .team-pill p { font-size: 11px; font-weight: 600; color: var(--text-2); line-height: 1.3; }
+
+  /* ── ADDRESS STRIP ── */
+  .addr-strip { background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 1.5rem 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+  .addr-item { display: flex; align-items: flex-start; gap: 10px; max-width: 280px; }
+  .addr-item svg { fill: var(--accent); width: 16px; height: 16px; flex-shrink: 0; margin-top: 3px; }
+  .addr-item strong { display: block; font-size: 12px; font-weight: 700; color: var(--text-1); margin-bottom: 2px; }
+  .addr-item span { font-size: 12px; color: var(--text-2); line-height: 1.5; }
+
+  /* ── CONTACT ── */
+  .contact-section { background: var(--bg-surface); text-align: center; padding: 4rem 2rem; border-top: 1px solid var(--border); }
+  .contact-section h2 { font-size: 30px; font-weight: 800; color: var(--text-1); margin-bottom: 0.5rem; }
+  .contact-section > p { color: var(--text-2); font-size: 15px; margin-bottom: 2rem; }
+  .contact-cards { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 2.5rem; }
+  .contact-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 1.25rem 1.75rem; min-width: 165px; }
+  .cc-label { font-size: 10px; font-weight: 700; color: var(--text-3); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 5px; }
+  .cc-val { font-size: 14px; font-weight: 700; color: var(--text-1); }
+  .cta-group { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+  .cta-primary { background: var(--accent); color: #0f1117; padding: 13px 30px; border-radius: 6px; font-size: 14px; font-weight: 800; text-decoration: none; transition: background 0.15s; display: inline-block; }
+  .cta-primary:hover { background: var(--accent-lt); }
+  .cta-secondary { background: transparent; color: var(--text-1); padding: 13px 30px; border-radius: 6px; border: 1px solid var(--border-lt); font-size: 14px; font-weight: 600; text-decoration: none; transition: border-color 0.15s, color 0.15s; display: inline-block; }
+  .cta-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── FOOTER ── */
+  .footer { background: #0c0f19; border-top: 1px solid var(--border); padding: 2.5rem 2rem; text-align: center; }
+  .footer-logo { display: flex; align-items: center; gap: 10px; justify-content: center; margin-bottom: 1rem; }
+  .footer-logo img { width: 36px; height: 36px; border-radius: 6px; background: #fff; padding: 4px; }
+  .footer-logo span { font-size: 14px; font-weight: 700; color: var(--text-1); }
+  .footer-addr { font-size: 12px; color: var(--text-3); margin-bottom: 0.75rem; }
+  .footer-meta { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+  .footer-meta span { font-size: 12px; color: var(--text-3); }
+  .fa { color: var(--accent); font-weight: 700; }
+
+  @media (max-width: 640px) {
+    .nav-links { display: none; }
+    .hero { padding: 3rem 1.25rem; }
+    .hero h1 { font-size: 28px; }
+    .section { padding: 2.5rem 1.25rem; }
+    .stat-item { padding: 1rem 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="#home">
+    <img src="https://4.imimg.com/data4/WM/HP/MY-708282/jyoti-rubber-products-120x120.png" alt="Jyothi Rubber Industries logo">
+    <div class="nav-brand">Jyothi Rubber Industries <span>Mumbai · Est. 1970</span></div>
+  </a>
+  <div class="nav-links">
+    <a href="#categories">Products</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a class="nav-cta" href="https://wa.me/919821351243" target="_blank" rel="noopener">WhatsApp Us</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-text">
+    <div class="hero-badge"><span></span> GST Verified · IndiaMART Rank A · Est. 1970</div>
+    <h1>Industrial Rubber<br>Parts. Built to <em>Last.</em></h1>
+    <p class="hero-desc">Manufacturer of automotive rubber engine mountings, molded hoses, metal bonded bushes, strut kits, and precision steering components. Delivering quality across India from Mumbai since 1970.</p>
+    <div class="hero-meta">
+      <div class="meta-pill">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        Mira Road East, Mumbai 401105
+      </div>
+      <div class="meta-pill">
+        <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        +91-9821351243
+      </div>
+      <div class="meta-pill">
+        <svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+        5.0 ★ Rated · 55+ Years
+      </div>
+    </div>
+    <div class="hero-actions">
+      <a class="btn-primary" href="https://www.indiamart.com/jyotirubberproductsmumbai/" target="_blank" rel="noopener">View on IndiaMART</a>
+      <a class="btn-outline" href="#contact">Get a Quote</a>
+    </div>
+  </div>
+  <div class="hero-logo">
+    <img src="https://4.imimg.com/data4/WM/HP/MY-708282/jyoti-rubber-products-120x120.png" alt="Jyothi Rubber Industries">
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num">55+</div><div class="stat-label">Years in business</div></div>
+  <div class="stat-item"><div class="stat-num">11</div><div class="stat-label">Products</div></div>
+  <div class="stat-item"><div class="stat-num">5</div><div class="stat-label">Categories</div></div>
+  <div class="stat-item"><div class="stat-num">51–100</div><div class="stat-label">Employees</div></div>
+  <div class="stat-item"><div class="stat-num">5.0 ★</div><div class="stat-label">Seller rating</div></div>
+</div>
+
+<!-- CATEGORIES -->
+<section class="section" id="categories">
+  <div class="container">
+    <div class="section-header">
+      <h2>Product categories</h2>
+      <div class="divider"></div>
+      <p>Five focused categories covering the full spectrum of automotive rubber components — from mountings to bushes, hoses, kits, and speciality bushes.</p>
+    </div>
+    <div class="cat-grid">
+      <a class="cat-card" href="https://www.indiamart.com/jyotirubberproductsmumbai/automotive-rubber-parts.html" target="_blank" rel="noopener">
+        <img src="https://5.imimg.com/data5/VM/VC/MY-708282/rubber-engine-mountings-250x250.jpg" alt="Automotive Rubber Parts">
+        <div class="cat-card-body"><h3>Automotive Rubber Parts</h3><span class="cat-count">13 products</span></div>
+      </a>
+      <a class="cat-card" href="https://www.indiamart.com/jyotirubberproductsmumbai/rubber-hoses.html" target="_blank" rel="noopener">
+        <img src="https://5.imimg.com/data5/WM/BD/MY-708282/rubber-molded-hoses-250x250.jpg" alt="Rubber Hoses">
+        <div class="cat-card-body"><h3>Rubber Hoses</h3><span class="cat-count">2 products</span></div>
+      </a>
+      <a class="cat-card" href="https://www.indiamart.com/jyotirubberproductsmumbai/rubber-bushes.html" target="_blank" rel="noopener">
+        <img src="https://5.imimg.com/data5/DO/YA/MY-708282/metal-bonded-rubber-bush-250x250.jpg" alt="Rubber Bushes">
+        <div class="cat-card-body"><h3>Rubber Bushes</h3><span class="cat-count">2 products</span></div>
+      </a>
+      <a class="cat-card" href="https://www.indiamart.com/jyotirubberproductsmumbai/automotive-kits.html" target="_blank" rel="noopener">
+        <img src="https://5.imimg.com/data5/RK/MO/HT/SELLER-708282/strut-kits-250x250.jpg" alt="Automotive Kits">
+        <div class="cat-card-body"><h3>Automotive Kits</h3><span class="cat-count">1 product</span></div>
+      </a>
+      <a class="cat-card" href="https://www.indiamart.com/jyotirubberproductsmumbai/moulded-hoses.html" target="_blank" rel="noopener">
+        <img src="https://5.imimg.com/data5/EC/PK/QF/SELLER-708282/gunmetal-bushes-250x250.jpg" alt="New Item">
+        <div class="cat-card-body"><h3>New Item (Gunmetal Bushes)</h3><span class="cat-count">1 product</span></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ALL PRODUCTS + PRICES -->
+<section class="section section-alt" id="pricing">
+  <div class="container">
+    <div class="section-header">
+      <h2>All products &amp; pricing</h2>
+      <div class="divider"></div>
+      <p>All 11 products with indicative per-unit pricing. Click any product to view the full listing on IndiaMART or contact us directly for confirmed bulk rates.</p>
+    </div>
+    <div class="prod-grid">
+
+      <!-- 1 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/VM/VC/MY-708282/rubber-engine-mountings-250x250.jpg" alt="Automotive Rubber Engine Mounting">
+          <span class="cat-tag">Auto Parts</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Automotive Rubber Engine Mounting</h3>
+          <p class="spec">Material: Rubber · Hardness: 30–60 Shore</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 150</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/automotive-rubber-engine-mounting-1166447733.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/YK/CN/MY-708282/strut-mounts-250x250.jpg" alt="Automotive Strut Mount">
+          <span class="cat-tag">Auto Parts</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Automotive Strut Mount</h3>
+          <p class="spec">Material: Rubber &amp; Metal · For passenger vehicles</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 250</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/automotive-strut-mount-1166447888.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/YX/GX/MY-708282/steering-rack-boot-250x250.jpg" alt="Steering Rack Boot">
+          <span class="cat-tag">Auto Parts</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Steering Rack Boot</h3>
+          <p class="spec">Material: Rubber / TPE / TPV · Black</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 80</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/steering-rack-boot-11693487297.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/AH/JG/MY-708282/engine-mounts-250x250.jpg" alt="Automotive Engine Mounts">
+          <span class="cat-tag">Auto Parts</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Automotive Engine Mounts</h3>
+          <p class="spec">Material: Rubber &amp; Stainless Steel</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 120</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/automotive-engine-mounts-6014138062.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 5 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/UP/HK/MY-708282/generator-engine-mountings-250x250.jpg" alt="Generator Engine Mounting">
+          <span class="cat-tag">Auto Parts</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Generator Engine Mounting</h3>
+          <p class="spec">Material: Rubber · Anti-vibration grade</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 200</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/generator-engine-mounting-11693486973.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 6 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/WM/BD/MY-708282/rubber-molded-hoses-250x250.jpg" alt="Rubber Molded Hose">
+          <span class="cat-tag">Hoses</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Rubber Molded Hose</h3>
+          <p class="spec">Material: EPDM / Silicone · Custom sizes</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 100</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/rubber-molded-hose-1173012212.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 7 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/CU/SN/MY-708282/molded-hoses-250x250.jpg" alt="Rubber Hose">
+          <span class="cat-tag">Hoses</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Rubber Hose</h3>
+          <p class="spec">Material: Rubber · Pressure-rated, flexible</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 90</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/rubber-hose-11714461262.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 8 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/DO/YA/MY-708282/metal-bonded-rubber-bush-250x250.jpg" alt="Metal Bonded Rubber Bush">
+          <span class="cat-tag">Bushes</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Metal Bonded Rubber Bush</h3>
+          <p class="spec">Material: Rubber bonded to metal · Various sizes</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 60</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/metal-bonded-rubber-bush-11714701591.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 9 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/RQ/TP/MY-708282/rubber-bushes-2f-bushings-250x250.jpg" alt="Rubber Bush">
+          <span class="cat-tag">Bushes</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Rubber Bush / Bushing</h3>
+          <p class="spec">Material: Natural / Synthetic Rubber · Black</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 40</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/rubber-bush-11714454797.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 10 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/RK/MO/HT/SELLER-708282/strut-kits-250x250.jpg" alt="Strut Kits">
+          <span class="cat-tag">Auto Kits</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Strut Kits</h3>
+          <p class="spec">Complete assembly kit · For repair &amp; service</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 350</span><span class="unit">/ set</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/strut-kits-21486864488.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+      <!-- 11 -->
+      <div class="prod-card">
+        <div class="prod-card-img">
+          <img src="https://5.imimg.com/data5/EC/PK/QF/SELLER-708282/gunmetal-bushes-250x250.jpg" alt="Gunmetal Bushes">
+          <span class="cat-tag">New Item</span>
+        </div>
+        <div class="prod-card-body">
+          <h3>Gunmetal Bushes</h3>
+          <p class="spec">Material: Gunmetal · High wear resistance</p>
+          <div class="prod-price-row">
+            <div class="prod-price"><span class="amt">₹ 50</span><span class="unit">/ piece</span></div>
+            <span class="prod-price-note">excl. taxes</span>
+          </div>
+          <a class="prod-enquire" href="https://www.indiamart.com/proddetail/gunmetal-bushes-2853706235812.html" target="_blank" rel="noopener">View &amp; Enquire →</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="price-note-box">
+      <strong>⚠ Price disclaimer:</strong> Prices shown are indicative market-rate estimates (excl. GST). Actual prices may vary by quantity, specification &amp; material. Contact Jyothi Rubber Industries directly for confirmed pricing.
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Why choose us</h2>
+      <div class="divider"></div>
+      <p>Our expertise has earned us a reputation of international stature along with unrivaled superiority in the national market.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-num">01</div>
+        <h3>International quality standards</h3>
+        <p>Every product is manufactured to meet globally recognised quality benchmarks, keeping us well ahead of competitors in both national and international markets.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">02</div>
+        <h3>Wide array of products</h3>
+        <p>From engine mountings to steering boots and gunmetal bushes — a comprehensive lineup catering to diverse automotive and industrial requirements.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-num">03</div>
+        <h3>Client-centric approach</h3>
+        <p>Your requirements shape our solutions. Our skilled team works in close coordination to deliver exactly what is needed, on time, every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADDRESS STRIP -->
+<div class="addr-strip">
+  <div class="addr-item">
+    <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+    <div><strong>Factory Address</strong><span>R/9, Kasturi Industrial Estate, Goddev Phatak Road, Mira Road East, Mumbai – 401105, Maharashtra</span></div>
+  </div>
+  <div class="addr-item">
+    <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <div><strong>Phone Numbers</strong><span>+91-9821351243 &nbsp;·&nbsp; +91-8045201106</span></div>
+  </div>
+  <div class="addr-item">
+    <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+    <div><strong>Enquire Online</strong><span>Send requirements via IndiaMART · Ships from Mumbai · In Stock</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="section section-alt" id="about">
+  <div class="container">
+    <div class="section-header">
+      <h2>Company profile</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="about-grid">
+      <div class="info-card">
+        <div class="card-title">Company details</div>
+        <div class="info-row"><span class="info-label">Owner</span><span class="info-val">R Shetty (Proprietor)</span></div>
+        <div class="info-row"><span class="info-label">Nature</span><span class="info-val">Manufacturer &amp; Factory</span></div>
+        <div class="info-row"><span class="info-label">Employees</span><span class="info-val">51 to 100</span></div>
+        <div class="info-row"><span class="info-label">Legal status</span><span class="info-val">Proprietorship</span></div>
+        <div class="info-row"><span class="info-label">Turnover</span><span class="info-val">₹ 1.5 – 5 Crore</span></div>
+        <div class="info-row"><span class="info-label">GST</span><span class="info-val"><span class="gst-badge">✓ 27**********1Z7 Verified</span></span></div>
+        <div class="info-row"><span class="info-label">Member since</span><span class="info-val">Sep 2006 (IndiaMART)</span></div>
+        <div class="info-row"><span class="info-label">Established</span><span class="info-val">1970</span></div>
+        <div class="info-row"><span class="info-label">Rating</span><span class="info-val"><span class="stars">★★★★★</span> 5.0 · 2 reviews</span></div>
+        <div class="info-row"><span class="info-label">Ships from</span><span class="info-val">Mumbai · In Stock · Excl. all taxes</span></div>
+      </div>
+      <div class="info-card" id="team">
+        <div class="card-title">Our team</div>
+        <p class="team-desc">We are supported by a brilliant team of genius professionals with vast industry experience and knowledge in their respective domains. Our experts work in close coordination to ensure the highest quality output with zero hassles in the work environment.</p>
+        <div class="team-grid">
+          <div class="team-pill"><div class="team-icon">🧪</div><p>Chemists</p></div>
+          <div class="team-pill"><div class="team-icon">📊</div><p>Sales &amp; Marketing</p></div>
+          <div class="team-pill"><div class="team-icon">✅</div><p>Quality Controllers</p></div>
+          <div class="team-pill"><div class="team-icon">📦</div><p>Packaging Experts</p></div>
+          <div class="team-pill"><div class="team-icon">⚙️</div><p>Skilled Workforce</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <h2>Get in touch</h2>
+  <p>Reach out for custom quotations, bulk pricing, and product specifications.</p>
+  <div class="contact-cards">
+    <div class="contact-card"><div class="cc-label">WhatsApp / Call</div><div class="cc-val">+91-9821351243</div></div>
+    <div class="contact-card"><div class="cc-label">Office Phone</div><div class="cc-val">+91-8045201106</div></div>
+    <div class="contact-card"><div class="cc-label">Location</div><div class="cc-val">Mumbai – 401105</div></div>
+    <div class="contact-card"><div class="cc-label">Contact person</div><div class="cc-val">R Shetty (Owner)</div></div>
+  </div>
+  <div class="cta-group">
+    <a class="cta-primary" href="https://www.indiamart.com/jyotirubberproductsmumbai/" target="_blank" rel="noopener">View on IndiaMART</a>
+    <a class="cta-secondary" href="https://wa.me/919821351243" target="_blank" rel="noopener">WhatsApp Now</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-logo">
+    <img src="https://4.imimg.com/data4/WM/HP/MY-708282/jyoti-rubber-products-120x120.png" alt="Logo">
+    <span>Jyothi Rubber Industries</span>
+  </div>
+  <p class="footer-addr">R/9, Kasturi Industrial Estate, Goddev Phatak Road, Mira Road East, Mumbai – 401105, Maharashtra, India</p>
+  <div class="footer-meta">
+    <span>Manufacturer &amp; Factory</span>
+    <span>GST: <span class="fa">27**********1Z7</span></span>
+    <span>Est. <span class="fa">1970</span></span>
+    <span>IndiaMART <span class="fa">Rank A</span></span>
+    <span>© 2025 Jyothi Rubber Industries</span>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a href="https://wa.me/919821351243" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.833.738 5.494 2.027 7.8L0 32l8.437-2.007A15.93 15.93 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0z" fill="#25D366"/>
+    <path d="M23.507 19.66c-.36-.18-2.13-1.05-2.46-1.17-.33-.12-.57-.18-.81.18-.24.36-.93 1.17-1.14 1.41-.21.24-.42.27-.78.09-.36-.18-1.518-.559-2.892-1.785-1.069-.954-1.79-2.131-2.001-2.491-.21-.36-.023-.554.158-.733.162-.161.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.81-1.95-1.11-2.67-.292-.702-.589-.607-.81-.618a14.62 14.62 0 00-.69-.012c-.24 0-.63.09-.96.45-.33.36-1.26 1.23-1.26 3s1.29 3.48 1.47 3.72c.18.24 2.539 3.879 6.15 5.439.86.372 1.531.594 2.054.76.863.275 1.649.236 2.27.143.693-.103 2.13-.87 2.43-1.71.3-.84.3-1.56.21-1.71-.09-.15-.33-.24-.69-.42z" fill="#fff"/>
+  </svg>
+</a>
+
+<style>
+.wa-float {
+  position: fixed; bottom: 28px; right: 28px; z-index: 999;
+  width: 58px; height: 58px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.6); }
+.wa-float svg { width: 58px; height: 58px; }
+</style>
+</body>
+</html>
